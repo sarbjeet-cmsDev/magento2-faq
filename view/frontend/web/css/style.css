@@ -1,0 +1,28 @@
+dt.faq-h {
+    border: 1px solid #e6e6ee;
+    padding: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+dd.faq-d {
+    padding: 9px 8px;
+}
+dt.faq-h span.tgl {
+    border: 1px solid #666;
+    padding: 0px 0 0 1px;
+    border-radius: 100%;
+    width: 19px;
+    height: 19px;
+    font-size: 19px;
+    display: block;
+    font-family: serif;
+    color: #666;
+    float: left;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 8px;
+}
+dt.faq-h.active span.tgl {
+    line-height: 14px;
+}
+dl.faq-list{padding: 15px;}

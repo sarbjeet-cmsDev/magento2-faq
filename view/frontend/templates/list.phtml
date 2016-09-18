@@ -1,0 +1,38 @@
+<?php 
+$faqs = $block->getCollection();
+?>
+<?php if(!count($faqs)): ?>
+	<div class="message info empty">
+		<div><?php echo __("No Faq found!") ?></div>
+	</div>
+<?php else: ?>
+	<dl class="faq-list">
+		<?php foreach($faqs as $faq): ?>
+			<dt class="faq-h"><span class="tgl">+</span><?php echo $faq->getTitle() ?></dt>
+			<dd class="faq-d" style="display:none"><?php echo $faq->getContent() ?></dd>
+		<?php endforeach; ?>
+	</dl>
+	<?php echo $block->getPagerHtml() ?>
+<?php endif; ?>
+<script type="text/javascript">
+	require(['jquery'],function(){
+		jQuery(function(){
+
+			jQuery.fn.toggleText = function(t1, t2){
+			  if (this.html() == t1) this.html(t2);
+			  else                   this.html(t1);
+			  return this;
+			};
+
+			jQuery('.faq-h').click(function(){
+
+				jQuery(this).toggleClass('active');
+
+				jQuery(this).find('span.tgl').toggleText('-','+');
+
+				jQuery(this).next().stop().slideToggle();
+				
+			});
+		});
+	});
+</script>

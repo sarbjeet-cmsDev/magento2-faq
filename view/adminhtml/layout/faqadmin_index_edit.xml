@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Expert\Faq\Block\Adminhtml\Faq\Edit" name="faq_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Expert\Faq\Block\Adminhtml\Faq\Edit\Tabs" name="faq_edit_tabs">
+                <block class="Expert\Faq\Block\Adminhtml\Faq\Edit\Tab\Main" name="faq_edit_tab_main"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">faq_edit_tab_main</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

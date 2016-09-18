@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Expert_Faq::elements" title="Faq" module="Expert_Faq" sortOrder="30" parent="Magento_Backend::content" resource="Expert_Faq::elements"/>
+
+        <add id="Expert_Faq::list" title="Manage List" module="Expert_Faq" parent="Expert_Faq::elements" sortOrder="10" action="faqadmin" resource="Expert_Faq::list"/>
+
+    </menu>
+</config>
